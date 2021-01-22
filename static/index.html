@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MeetNsketch</title>
+<link rel="stylesheet" href="/static/index.css">
+<link rel="alternate icon" type="image/png" href="/static/logo.png">
+<link rel="icon" type="image/svg+xml" href="/static/logo.png">
+</head>
+<body><div class="login-page">
+<div class="form">
+<form class="login-form" action="/meet" method="get">
+<input type="text" placeholder="your nickname here" name="u" minlength="3" maxlength="20" required/>
+<input id="roomid" type="text" placeholder="paste room code here or enter a new one" name="r" minlength="3" maxlength="20" required/>
+<button type="submit">JOIN Room</button>
+</form>
+</div>
+<script>
+if(window.location.pathname.substr(1)!==""){
+document.getElementById('roomid').value=window.location.pathname.substr(1);
+document.getElementById('roomid').setAttribute('readonly','')
+}
+</script>
+</div></body></html>
